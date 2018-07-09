@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-header>Plan List</mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let plan of plans">
+        <img mat-list-avatar src="{{plan.giphyUrl}}" alt="{{plan.name}}">
+        <h3 mat-line>{{plan.name}}</h3>
+        <a mat-button [routerLink]="['/plan-edit', plan.id]">{{plan.name}}</a>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <button mat-fab color="primary" [routerLink]="['/plan-add']">Add</button>
+
+</mat-card>
